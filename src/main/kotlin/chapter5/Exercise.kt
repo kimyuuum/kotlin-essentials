@@ -4,10 +4,10 @@ fun secondsToPrettyTime(seconds: Int): String {
     // 초를 정숫값으로 받아서 시간을 "X h  Y min Z sec 형태의 문자열로 반환하는 함수
     // 값이 0이면 결과값을 만들지 않는다
     // 음수면 Invalid input을 반환한다
-
-    when {
-        seconds < 0 -> return "Invalid input"
-        seconds == 0 -> return ""
+    // return when을 사용하면 마지막에 있는 변수가 return 값이 된다
+    return when {
+        seconds < 0 -> "Invalid input"
+        seconds == 0 -> ""
         else -> {
             val hour = seconds / (60 * 60)
             val min = (seconds - (hour * 60 * 60)) / 60
@@ -26,7 +26,8 @@ fun secondsToPrettyTime(seconds: Int): String {
             if (sec != 0) {
                 res += " $sec sec"
             }
-            return res.trimIndent()
+
+            res.trimIndent()
         }
     }
 }

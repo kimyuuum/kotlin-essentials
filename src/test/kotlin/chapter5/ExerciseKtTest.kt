@@ -39,5 +39,10 @@ class ExerciseKtTest {
         assertThat(message).isEqualTo(result)
     }
 
-    // Add more tests here
+    @Test
+    fun testOnlySec() {
+        val message = "45 sec"
+        val result = secondsToPrettyTime(45)
+        assertThat(message).isEqualTo(result)
+    }
 }

@@ -1,4 +1,5 @@
 package chapter8
 
-class EmailAddress {
-}
+data class EmailAddress(
+    val email: String?,
+)

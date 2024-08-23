@@ -1,4 +1,7 @@
 package chapter8
 
-class User {
-}
+data class User(
+    val name: String?,
+    val age: Int?,
+    val email: EmailAddress?,
+)

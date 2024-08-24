@@ -9,23 +9,17 @@ class Exercise {
         var result = ""
 
         if (name.isNullOrEmpty() == false) {
-            result += name
+            result += "$name "
         }
 
         if (surName.isNullOrEmpty() == false) {
-            if (result.isNotEmpty()) {
-                result += " "
-            }
-            result += surName
+            result += "$surName "
         }
 
         if (age != null) {
-            if (result.isNotEmpty()) {
-                result += " "
-            }
             result += "($age)"
         }
 
-        return result
+        return result.trim()
     }
 }

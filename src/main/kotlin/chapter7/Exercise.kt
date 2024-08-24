@@ -37,4 +37,13 @@ class Exercise {
 
         return result.dropLast(2)
     }
+
+    fun countDownByStep2(
+        start: Int,
+        end: Int,
+        step: Int,
+    ): String {
+        // joinToString의 기본 separator는 ", "이다.
+        return (start downTo end step step).joinToString()
+    }
 }
